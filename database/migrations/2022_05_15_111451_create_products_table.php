@@ -20,10 +20,7 @@ class CreateProductsTable extends Migration
             $table->double('price',82)->nullable();
             $table->integer('quantity')->nullable();
             $table->timestamps();
-            $table->unsingnedBiginteger('product_id');
-            $table->foreign('product_id')
-            ->references('id')
-            ->on('product');
+            $table->unsignedBigInteger('Catagory1_id')->foreign('Catagory1-id')->reference('id')->on('Catagory1')->onDelet('cascade');
         });
     }
 
